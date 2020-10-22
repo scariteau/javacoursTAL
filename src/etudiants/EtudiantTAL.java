@@ -2,7 +2,7 @@ package etudiants;
 
 public  class EtudiantTAL {
 
-	private int age;
+	private Integer age;
 	public String nom;
 	protected long numeroEtudiant;
 	long numero;
@@ -10,7 +10,7 @@ public  class EtudiantTAL {
 	public static String ville;
 	
 	EtudiantTAL(String nom){
-		age=44;
+		age=(Integer)44;
 		this.nom=nom;
 	}
 	
