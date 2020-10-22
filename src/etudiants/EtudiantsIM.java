@@ -19,8 +19,20 @@ public class EtudiantsIM {
 		ProfTAL profDeJava = new ProfTAL("sandrine", "sandy","Java");
 		profDeJava.setEtudiantPref(etudianteMylene);
 		
-		profDeJava.imprimerEtudiantPrefere();
-
+		profDeJava.afficherEtudiantPrefere();
+		
+		EtudiantTAL etudianteGerad = new EtudiantTAL("Gerard", 52);
+		profDeJava.setEtudiantPref(etudianteGerad);
+		profDeJava.afficherEtudiantPrefere();
+		
+		
+		
+		EtudiantTALInalco etudianteTata = new EtudiantTALInalco("Tata", 22,"italien");
+		profDeJava.setEtudiantDeteste(etudianteTata);
+		
+		EtudiantTAL etudianteToto = new EtudiantTAL("Toto", 52);
+		/// KO: profDeJava.setEtudiantDeteste(etudianteToto);
+		
 		
 }
 

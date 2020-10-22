@@ -1,13 +1,15 @@
 package professeurs;
 
+import etudiants.EtudiantTAL;
 import etudiants.EtudiantTALInalco;
 
 public class ProfTAL {
 
-	String nom;
+	private String nom;
 	String prenom;
 	String matiere;
-	EtudiantTALInalco etudiantPref;
+	EtudiantTAL etudiantPref;
+	EtudiantTALInalco etudiantDeteste;
 
 	public ProfTAL(String nom, String prenom, String matiere) {
 		this.nom=nom;
@@ -16,17 +18,33 @@ public class ProfTAL {
 
 	}
 
-	public void imprimerEtudiantPrefere() {
+	public void afficherEtudiantPrefere() {
 		System.out.println(
-				"Mon etudiant preferee est =" + etudiantPref.nom + " et il etudie==" + etudiantPref.getLangue());
+				"Mon etudiant preferee est =" + etudiantPref.nom + " et il a ==" + etudiantPref.getAge());
 	}
 
-	public EtudiantTALInalco getEtudiantPref() {
+	public EtudiantTAL getEtudiantPref() {
 		return etudiantPref;
 	}
 
-	public void setEtudiantPref(EtudiantTALInalco etudiantPref) {
+	public void setEtudiantPref(EtudiantTAL etudiantPref) {
 		this.etudiantPref = etudiantPref;
+	}
+
+	public EtudiantTALInalco getEtudiantDeteste() {
+		return etudiantDeteste;
+	}
+
+	public void setEtudiantDeteste(EtudiantTALInalco etudiantDeteste) {
+		this.etudiantDeteste = etudiantDeteste;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
 }
