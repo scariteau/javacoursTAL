@@ -2,8 +2,12 @@ package professeurs;
 
 import etudiants.EtudiantTAL;
 import etudiants.EtudiantTALInalco;
-import etudiants.EtudiantsIM;
 
+
+/**
+ * @author 33616
+ *
+ */
 public class ProfTAL {
 
 	private String nom;
