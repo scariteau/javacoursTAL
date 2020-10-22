@@ -2,6 +2,7 @@ package professeurs;
 
 import etudiants.EtudiantTAL;
 import etudiants.EtudiantTALInalco;
+import etudiants.EtudiantsIM;
 
 public class ProfTAL {
 
@@ -19,6 +20,7 @@ public class ProfTAL {
 	}
 
 	public void afficherEtudiantPrefere() {
+
 		System.out.println(
 				"Mon etudiant preferee est =" + etudiantPref.nom + " et il a ==" + etudiantPref.getAge());
 	}

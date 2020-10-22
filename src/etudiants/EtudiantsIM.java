@@ -26,12 +26,22 @@ public class EtudiantsIM {
 		profDeJava.afficherEtudiantPrefere();
 		
 		
-		
 		EtudiantTALInalco etudianteTata = new EtudiantTALInalco("Tata", 22,"italien");
 		profDeJava.setEtudiantDeteste(etudianteTata);
 		
 		EtudiantTAL etudianteToto = new EtudiantTAL("Toto", 52);
 		/// KO: profDeJava.setEtudiantDeteste(etudianteToto);
+		etudianteTata.setVille("gif sur yvette");
+		
+		System.out.println("ville Tata="+ etudianteTata.getVille());
+		
+		System.out.println("ville Gerard="+etudianteGerad.getVille());
+		
+		EtudiantTAL.setVille("Paris");
+		
+		System.out.println("ville Tata="+ etudianteTata.getVille());
+		
+		System.out.println("ville Gerard="+etudianteGerad.getVille());
 		
 		
 }

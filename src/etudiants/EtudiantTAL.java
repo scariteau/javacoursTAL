@@ -1,17 +1,21 @@
 package etudiants;
 
-public class EtudiantTAL {
+public  class EtudiantTAL {
 
 	private int age;
 	public String nom;
 	protected long numeroEtudiant;
 	long numero;
+	public final String pays="France";
+	public static String ville;
 	
 	EtudiantTAL(String nom){
+		age=44;
 		this.nom=nom;
 	}
 	
 	EtudiantTAL(String nom, long numeroEtudiant){
+		this.age=55;
 		this.nom=nom;
 		this.numeroEtudiant=numeroEtudiant;
 	}
@@ -36,6 +40,14 @@ public class EtudiantTAL {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public static String getVille() {
+		return ville;
+	}
+
+	public static void setVille(String ville) {
+		EtudiantTAL.ville = ville;
 	}
 
 
