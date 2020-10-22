@@ -8,10 +8,18 @@ public  class EtudiantTAL {
 	long numero;
 	public final String pays="France";
 	public static String ville;
+	private Boolean fille;
+	private String[] matieres= new String[5];
 	
 	EtudiantTAL(String nom){
 		age=(Integer)44;
+		age=Integer.valueOf(44);
 		this.nom=nom;
+		fille=(Boolean)true;
+	}
+	
+	EtudiantTAL(String[] matieres){
+		this.matieres=matieres;
 	}
 	
 	EtudiantTAL(String nom, long numeroEtudiant){

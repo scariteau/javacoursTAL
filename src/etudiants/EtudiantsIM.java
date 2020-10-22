@@ -43,6 +43,10 @@ public class EtudiantsIM {
 		
 		System.out.println("ville Gerard="+etudianteGerad.getVille());
 		
+		String[] matieres= new String[5];
+		EtudiantTAL EtudiantArthur= new EtudiantTAL(matieres);
+
+		
 		
 }
 
