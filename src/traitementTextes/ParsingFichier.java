@@ -15,6 +15,9 @@ import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
+import etudiants.EtudiantTALInalco;
+import etudiants.EtudiantsIM;
+
 public class ParsingFichier {
 
 	// java traitementTextes.ParsingFichier
@@ -82,13 +85,13 @@ public class ParsingFichier {
 	/**
 	 *  Ecrire dans un fichier avec la classe Files
 	 * @param path : chemin vers le fichier a lire
+	 * @param contenuAjouter : contenu a ajouter au fichier
 	 * @throws IOException
 	 */
-	protected void modifierFichierAvecFiles(String path) throws IOException {
 
-		String content = "\n Je suis une 2eme ligne dans le fichier avec Files";
+	protected void modifierFichierAvecFiles(String path, String contenuAjouter) throws IOException {
 
-		List<String> lignes = Arrays.asList(content);
+		List<String> lignes = Arrays.asList(contenuAjouter);
 		Path fichier = Paths.get(path);
 
 		Files.write(fichier, lignes, Charset.forName("UTF-8"), StandardOpenOption.APPEND);
@@ -110,7 +113,14 @@ public class ParsingFichier {
 			parsingFichier.ecrireFichierAvecBufferedWriter(args[1]);
 
 			System.out.println("Modifier fichier avec ajouterFichierTxtFiles");
-			parsingFichier.modifierFichierAvecFiles(args[1]);
+			parsingFichier.modifierFichierAvecFiles(args[1], "\n une nouvelle ligne ajouter au fichier");
+			
+			EtudiantTALInalco sylvie=new EtudiantTALInalco("Sylvie", 1235, "japonais");
+			
+			System.out.println("Modifier fichier avec ajouterFichierTxtFiles avec un etudiant");
+			parsingFichier.modifierFichierAvecFiles(args[1], "\n" +sylvie.toString());
+			
+			
 
 		} catch (FileNotFoundException exc) {
 			System.out.println("Erreur d'ouverture du fichier");

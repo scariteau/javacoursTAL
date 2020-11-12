@@ -7,7 +7,7 @@ public class EtudiantTALInalco extends EtudiantTAL {
 	private String langue;
 	private ProfTAL profPrefere;
 
-	EtudiantTALInalco(String nom, long numeroEtudiant, String langue) {
+	public EtudiantTALInalco(String nom, long numeroEtudiant, String langue) {
 		super(nom, numeroEtudiant);
 		this.langue = langue;
 	}
