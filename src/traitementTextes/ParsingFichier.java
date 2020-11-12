@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import etudiants.EtudiantTALInalco;
-import etudiants.EtudiantsIM;
 
 public class ParsingFichier {
 
@@ -45,6 +44,7 @@ public class ParsingFichier {
 
 	/**
 	 * Lire dans un fichier avec la classe BufferedReader
+	 * tester
 	 * @param path : chemin vers le fichier a lire
 	 * @throws IOException
 	 */
@@ -93,11 +93,14 @@ public class ParsingFichier {
 
 		List<String> lignes = Arrays.asList(contenuAjouter);
 		Path fichier = Paths.get(path);
-
 		Files.write(fichier, lignes, Charset.forName("UTF-8"), StandardOpenOption.APPEND);
-
+		
 	}
 
+	
+	
+	
+	
 	public static void main(String[] args) {
 
 		ParsingFichier parsingFichier = new ParsingFichier();
