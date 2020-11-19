@@ -1,0 +1,7 @@
+1-Concevoir un modéle objet dans un package nommé bibliotheque définissant des classes représentant les objets du fichier "bibliotheque.xml"
+2-Dans ce package, il devra y avoir une classe "Catalogue" permettant d'avoir des informations sur la bibliotheque. Dont certains comportements sont :
+
+	java bibliotheque.Catalogue "Victor Hugo" doit afficher l'auteur "Victor Hugo" le nombre de livre de cet auteur dans le catalogue et la liste des titres de ses oeuvres.
+
+	java bibliotheque.Catalogue "Victor Hugo"  "Les Misérables" doit afficher l'auteur "Victor Hugo" , le titre du livre "Les Misérables" , le nombre de tomes de ce livre, la date de publication et le résumé du livre
+3-Comment modifieriez-vous votre code pour nous permettre de pouvoir ajouter, modifier ou enlever un livre?
