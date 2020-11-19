@@ -2,6 +2,7 @@ package traitementTextes;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -21,9 +22,11 @@ public class ParsingFichier {
 
 	// java traitementTextes.ParsingFichier
 	// C:\Users\33616\Documents\Boulot\javacours\javacoursTALCode\src\traitementTextes\fichierAparser.txt
+	// C:\Users\33616\Documents\Boulot\javacours\javacoursTALCode\src\traitementTextes\nouveauFichierCreer.txt
 
 	/**
 	 * Lire dans un fichier avec la classe Scanner
+	 * 
 	 * @param path : chemin vers le fichier a lire
 	 * @throws IOException
 	 */
@@ -43,8 +46,8 @@ public class ParsingFichier {
 	}
 
 	/**
-	 * Lire dans un fichier avec la classe BufferedReader
-	 * tester
+	 * Lire dans un fichier avec la classe BufferedReader tester
+	 * 
 	 * @param path : chemin vers le fichier a lire
 	 * @throws IOException
 	 */
@@ -61,6 +64,7 @@ public class ParsingFichier {
 
 	/**
 	 * Ecrire dans un fichier avec la classe BufferedWriter
+	 * 
 	 * @param path : chemin vers le fichier a lire
 	 * @throws IOException
 	 */
@@ -83,8 +87,9 @@ public class ParsingFichier {
 	}
 
 	/**
-	 *  Ecrire dans un fichier avec la classe Files
-	 * @param path : chemin vers le fichier a lire
+	 * Ecrire dans un fichier avec la classe Files
+	 * 
+	 * @param path           : chemin vers le fichier a lire
 	 * @param contenuAjouter : contenu a ajouter au fichier
 	 * @throws IOException
 	 */
@@ -94,13 +99,54 @@ public class ParsingFichier {
 		List<String> lignes = Arrays.asList(contenuAjouter);
 		Path fichier = Paths.get(path);
 		Files.write(fichier, lignes, Charset.forName("UTF-8"), StandardOpenOption.APPEND);
-		
+
 	}
 
-	
-	
-	
-	
+	/**
+	 * Lire dans un fichier avec la classe Scanner
+	 * 
+	 * @param path      : chemin vers le fichier a lire
+	 * @param occurence : texte a rechercher
+	 * @throws IOException
+	 */
+	protected void rechercherNbChiffres(String path) throws IOException {
+
+		java.util.Scanner lecteur;
+
+		java.io.File fichier = new java.io.File(path);
+		lecteur = new java.util.Scanner(fichier);
+
+		int contenuLigne ;
+		int nbChiffres = 0;
+		while (lecteur.hasNextInt()) {
+			contenuLigne = lecteur.nextInt();
+			System.out.println("Chiffre lue==" + contenuLigne);
+			nbChiffres++;
+
+		}
+		System.out.println("Nombre de chiffres dans ce texte ==" + nbChiffres);
+		lecteur.close();
+	}
+
+	protected void rechercherNbOccurences(String path, String occurence) throws IOException {
+		BufferedReader lecteurAvecBuffer = null;
+		String ligne;
+
+		lecteurAvecBuffer = new BufferedReader(new FileReader(path));
+
+		int nbOccurence = 0;
+		while ((ligne = lecteurAvecBuffer.readLine()) != null)
+
+		{
+			System.out.println("Ligne lue==" + ligne);
+			if (ligne.contains(occurence))
+				nbOccurence++;
+
+		}
+		System.out.println("NB occurence du mot " + occurence + "==" + nbOccurence);
+		lecteurAvecBuffer.close();
+	}
+
 	public static void main(String[] args) {
 
 		ParsingFichier parsingFichier = new ParsingFichier();
@@ -117,12 +163,15 @@ public class ParsingFichier {
 
 			System.out.println("Modifier fichier avec ajouterFichierTxtFiles");
 			parsingFichier.modifierFichierAvecFiles(args[1], "\n une nouvelle ligne ajouter au fichier");
-			
-			EtudiantTALInalco sylvie=new EtudiantTALInalco("Sylvie", 1235, "japonais");
-			
+
+			EtudiantTALInalco sylvie = new EtudiantTALInalco("Sylvie", 1235, "japonais");
+
 			System.out.println("Modifier fichier avec ajouterFichierTxtFiles avec un etudiant");
-			parsingFichier.modifierFichierAvecFiles(args[1], "\n" +sylvie.toString());
+			parsingFichier.modifierFichierAvecFiles(args[1], "\n" + sylvie.toString());
+
+			parsingFichier.rechercherNbOccurences(args[2], "Il meurt lentement");
 			
+			parsingFichier.rechercherNbChiffres(args[2]);
 			
 
 		} catch (FileNotFoundException exc) {
