@@ -2,7 +2,6 @@ package traitementTextes;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.Closeable;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -30,19 +29,19 @@ public class ParsingFichier {
 	 * @param path : chemin vers le fichier a lire
 	 * @throws IOException
 	 */
-	protected void lireFichierAvecScanner(String path) throws IOException {
+	protected String lireFichierAvecScanner(String path) throws IOException {
 
 		java.util.Scanner lecteur;
 
 		java.io.File fichier = new java.io.File(path);
 		lecteur = new java.util.Scanner(fichier);
 
-		String somme = "";
+		String contenuFichier = "";
 		while (lecteur.hasNext())
-			somme += lecteur.next();
-		System.out.println(somme);
-
+			contenuFichier += lecteur.next();
+		System.out.println(contenuFichier);
 		lecteur.close();
+		return contenuFichier;
 	}
 
 	/**
@@ -51,15 +50,16 @@ public class ParsingFichier {
 	 * @param path : chemin vers le fichier a lire
 	 * @throws IOException
 	 */
-	protected void lireFichierAvecBufferedReader(String path) throws IOException {
+	protected String lireFichierAvecBufferedReader(String path) throws IOException {
 		BufferedReader lecteurAvecBuffer = null;
-		String ligne;
-
+		String contenuFichier="";
+		String line="";
 		lecteurAvecBuffer = new BufferedReader(new FileReader(path));
 
-		while ((ligne = lecteurAvecBuffer.readLine()) != null)
-			System.out.println(ligne);
+		while ((line = lecteurAvecBuffer.readLine()) != null)
+			contenuFichier=contenuFichier+line;
 		lecteurAvecBuffer.close();
+		return contenuFichier;
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class ParsingFichier {
 		java.io.File fichier = new java.io.File(path);
 		lecteur = new java.util.Scanner(fichier);
 
-		int contenuLigne ;
+		int contenuLigne;
 		int nbChiffres = 0;
 		while (lecteur.hasNextInt()) {
 			contenuLigne = lecteur.nextInt();
@@ -170,9 +170,8 @@ public class ParsingFichier {
 			parsingFichier.modifierFichierAvecFiles(args[1], "\n" + sylvie.toString());
 
 			parsingFichier.rechercherNbOccurences(args[2], "Il meurt lentement");
-			
+
 			parsingFichier.rechercherNbChiffres(args[2]);
-			
 
 		} catch (FileNotFoundException exc) {
 			System.out.println("Erreur d'ouverture du fichier");
