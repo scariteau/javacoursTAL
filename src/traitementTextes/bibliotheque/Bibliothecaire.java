@@ -23,10 +23,6 @@ public class Bibliothecaire {
 		}
 
 	}
-	
-	public void enleverLivre(Livre ancienLivre) {
-
-	}
 
 	public String listerOeuvresAuteur(Auteur auteur) {
 		ArrayList<Livre> livres= catalogue.get(auteur);
@@ -37,6 +33,13 @@ public class Bibliothecaire {
 		return "L'auteur "+auteur.getNom()+" a ecrit "+livres.size() +" livres:\n"+ titreDesLivres;
 	}
 	
+	public void enleverLivre(Livre ancienLivre) {
+
+	}
+	
+	public void preterLivre(Livre ancienLivre) {
+
+	}
 	
 
 	public HashMap<Auteur, ArrayList<Livre>> getCatalogue() {
