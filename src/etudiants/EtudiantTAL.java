@@ -1,49 +1,46 @@
 package etudiants;
 
-public  class EtudiantTAL {
+import java.io.Serializable;
 
+import traitementTextes.bibliotheque.personnes.Abonne;
+
+public class EtudiantTAL extends Abonne implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer age;
-	public String nom;
-	protected long numeroEtudiant;
-	long numero;
-	public final String pays="France";
-	public static String ville;
-	private Boolean fille;
-	private String[] matieres= new String[5];
-	
-	EtudiantTAL(String nom){
-		age=(Integer)44;
-		age=Integer.valueOf(44);
-		this.nom=nom;
-		fille=(Boolean)true;
+	private String nom;
+	private long numeroEtudiant;
+
+
+	private static String ville;
+
+	EtudiantTAL(String nom) {
+		super(nom, 0);
 	}
-	
-	EtudiantTAL(String[] matieres){
-		this.matieres=matieres;
+
+	public EtudiantTAL(String nom, long numeroEtudiant) {
+		super(nom, numeroEtudiant);
 	}
-	
-	EtudiantTAL(String nom, long numeroEtudiant){
-		this.age=55;
-		this.nom=nom;
-		this.numeroEtudiant=numeroEtudiant;
+
+	EtudiantTAL(String nom, long numeroEtudiant, int age) {
+		super(nom, numeroEtudiant);
+		this.age = age;
 	}
-	
-	EtudiantTAL(String nom, long numeroEtudiant, int age){
-		this.nom=nom;
-		this.numeroEtudiant=numeroEtudiant;
-		this.age=age;
-	}
-	
+
 	public String toString() {
 		return "Methode ToString de la classe EtudiantTAL. \n" + "Nom =" + nom + "\n" + "age =" + age + "\n"
 				+ "numeroEtudiant =" + numeroEtudiant + "\n";
 	}
-	 String imprimerID(String nom, long numeroEtudiant) {
-		return "Je m'appelle "+nom+" , mon numéro d'étudiant est "+numeroEtudiant+" ";
+
+	String imprimerID(String nom, long numeroEtudiant) {
+		return "Je m'appelle " + nom + " , mon numéro d'étudiant est " + numeroEtudiant + " ";
 	}
 
 	public int getAge() {
-		return age -2;
+		return age - 2;
 	}
 
 	public void setAge(int age) {
@@ -58,5 +55,12 @@ public  class EtudiantTAL {
 		EtudiantTAL.ville = ville;
 	}
 
+	
+	public long getNumeroEtudiant() {
+		return numeroEtudiant;
+	}
 
+	public void setNumeroEtudiant(long numeroEtudiant) {
+		this.numeroEtudiant = numeroEtudiant;
+	}
 }

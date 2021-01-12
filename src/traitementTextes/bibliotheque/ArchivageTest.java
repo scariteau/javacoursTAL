@@ -12,6 +12,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import traitementTextes.Serialisateur;
+import traitementTextes.bibliotheque.catalogue.Auteur;
+import traitementTextes.bibliotheque.catalogue.Livre;
 
 class ArchivageTest {
 

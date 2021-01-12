@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<bibliotheque>
+    <livre>
+        <titre>Harry Potter</titre>
+        <auteur>J. K. Rowling</auteur>
+        <nb_tomes>7</nb_tomes>
+        <date_publication>1998</date_publication>
+        <resume>Orphelin, le jeune Harry Potter peut enfin quitter ses tyranniques oncle et tante Dursley lorsqu'un curieux messager lui révèle qu'il est un sorcier. �&#128; 11 ans, Harry va enfin pouvoir intégrer la légendaire école de sorcellerie de Poudlard, y trouver une famille digne de ce nom et des amis, développer ses dons, et préparer son glorieux avenir.
+	</resume>
+    </livre>
+    <livre>
+        <titre>Les Misérables</titre>
+        <auteur>Victor Hugo</auteur>
+        <nb_tomes>3</nb_tomes>
+        <date_publication>1862</date_publication>
+        <resume>Roman emblématique de la littérature française qui décrit la vie de pauvres gens dans Paris et la France provinciale du XIXe siècle, l'auteur s'attache plus particulièrement au destin du bagnard Jean Valjean. C'est un roman historique, social et philosophique dans lequel on retrouve les idéaux du romantisme et ceux de Victor Hugo concernant la nature humaine. 
+	</resume>
+    </livre>
+    <livre>
+        <titre>Notre Dame de Paris</titre>
+        <auteur>Victor Hugo</auteur>
+        <date_publication>1831</date_publication>
+        <resume>roman historique faisant référence à la cathédrale Notre-Dame de Paris, qui est un des lieux principaux de l'intrigue du roman. L'intrigue se déroule à Paris en 1482
+	</resume>
+    </livre>
+    <livre>
+        <titre>Les Feuilles d'automne</titre>
+        <auteur>Victor Hugo</auteur>
+        <date_publication>1831</date_publication>
+        <resume>un recueil de poèmes regroupant six poèmes appelés Soleils couchants. 
+	</resume>
+    </livre>
+    <livre>
+        <titre>L'Assomoir</titre>
+        <auteur>�&#137;mile Zola</auteur>
+        <date_publication>1876</date_publication>
+        <resume>L'ouvrage est totalement consacré au monde ouvrier et, selon Zola, c'est « le premier roman sur le peuple, qui ne mente pas et qui ait l'odeur du peuple2 ». L'écrivain y restitue la langue et les m�&#147;urs des ouvriers, tout en décrivant les ravages causés par la misère et l'alcoolisme. �&#128; sa parution, l'ouvrage suscite de vives polémiques car il est jugé trop cru. Mais c'est ce naturalisme qui, cependant, provoque son succès, assurant à l'auteur fortune et célébrité. 
+	</resume>
+    </livre>
+    <livre lang="en">
+        <titre>DAVID COPPERFIELD</titre>
+        <auteur>Charles Dickens</auteur>
+        <nb_tomes>10</nb_tomes>
+        <date_publication>1902</date_publication>
+        <resume>Ce roman, écrit à la première personne, et en partie autobiographique, raconte les tribulations de l'orphelin David Copperfield, de sa petite enfance jusqu'à l'âge adulte. De fait Dickens fait de nous des petits enfants suspendus au fil de l'histoire, plongés dans une aventure et des lieux merveilleux.
+	</resume>
+    </livre>
+    <livre>
+        <titre>your</titre>
+        <auteur>name</auteur>
+        <nb_tomes>1</nb_tomes>
+        <date_publication>1034</date_publication>
+        <resume>errjjkjhfsf</resume>
+    </livre>
+</bibliotheque>

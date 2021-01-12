@@ -26,7 +26,7 @@ public class ProfTAL {
 	public void afficherEtudiantPrefere() {
 
 		System.out.println(
-				"Mon etudiant preferee est =" + etudiantPref.nom + " et il a ==" + etudiantPref.getAge());
+				"Mon etudiant preferee est =" + etudiantPref.getNom() + " et il a ==" + etudiantPref.getAge());
 	}
 
 	public EtudiantTAL getEtudiantPref() {

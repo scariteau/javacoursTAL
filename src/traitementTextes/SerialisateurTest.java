@@ -49,7 +49,7 @@ class SerialisateurTest {
 		EtudiantTAL etudiant = (EtudiantTAL) objetDeserialise;
 
 		assertNotNull(etudiant);
-		assertEquals(etudiant.nom, Nom_Etudiant);
+		assertEquals(etudiant.getNom(), Nom_Etudiant);
 	}
 
 	@Test

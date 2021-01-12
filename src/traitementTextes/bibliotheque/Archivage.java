@@ -11,6 +11,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import traitementTextes.Serialisateur;
+import traitementTextes.bibliotheque.catalogue.Auteur;
+import traitementTextes.bibliotheque.catalogue.Livre;
 
 public class Archivage {
 

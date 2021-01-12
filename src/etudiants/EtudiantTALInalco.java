@@ -4,6 +4,10 @@ import professeurs.ProfTAL;
 
 public class EtudiantTALInalco extends EtudiantTAL {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String langue;
 	private ProfTAL profPrefere;
 
@@ -16,15 +20,14 @@ public class EtudiantTALInalco extends EtudiantTAL {
 		return super.imprimerID(nom, numeroEtudiant) + "ma langue de spécialité est: " + langue;
 	}
 
-	
 	public void afficherProfPrefere() {
-		System.out.println(
-				"Mon Prof preferee est =" + profPrefere.getNom());
-		
+		System.out.println("Mon Prof preferee est =" + profPrefere.getNom());
+
 	}
+
 	public String toString() {
-		return "Methode ToString de la classe EtudiantTALInalco. \n" + "Nom =" + nom + "\n" + "langue =" + langue + "\n"
-				+ "numeroEtudiant =" + numeroEtudiant + "\n";
+		return "Methode ToString de la classe EtudiantTALInalco. \n" + "Nom =" + getNom() + "\n" + "langue =" + langue + "\n"
+				+ "numeroEtudiant =" + getNumeroEtudiant() + "\n";
 	}
 
 	public String getLangue() {

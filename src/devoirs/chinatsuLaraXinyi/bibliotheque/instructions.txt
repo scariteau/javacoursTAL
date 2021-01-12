@@ -1,0 +1,23 @@
+Lara Dunuan
+	
+Pièces jointes28 nov. 2020 22:11 (il y a 2 jours)
+	
+À Chinatsu, saisland, moi
+Bonsoir Madame,
+
+Voici notre devoir Java sur le traitement de fichier XML.
+Nous avons deux classes Catalogue et Livre.
+
+Pour le fichier d'entrée (bibliotheque.xml), nous avons changé l'encodage en utf8 car nous avons rencontré des problèmes pendant le traitement. Notre script crée un fichier output bibliotheque_updated.xml lorsqu' on ajoute/supprime/modifie un livre.  
+Veuillez changer le chemin pour le fichier d'entrée dans le main() et pour le fichier output dans la méthode writeXMLFile.
+
+Nous avons essayé de faire de notre mieux, mais compte tenu de nos limites, voici ce que nous avons fait:
+-Ajouter un livre
+-Supprimer un livre par titre uniquement
+-Modifier un livre par titre uniquement
+(Lorsque nous disons «modifier», nous avons simplement transformé le titre en majuscules.)
+
+Puisque certains <livre> n'ont pas de <nb_tomes>, nous avons rencontré des exceptions NullPointerException et nous n'avons traité que ce cas. D'autres cas n'ont pas été considérés.
+
+Merci bien et bon week-end,
+Chinatsu, Lara et Xinyi

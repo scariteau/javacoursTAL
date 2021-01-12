@@ -178,7 +178,9 @@ public class Bibliotheque {
 			nouvBibli.close();
 		}
 		catch (IOException e) {
+			
 			System.out.println("Impossible d'écrire dans le fichier " + file + ". Veuillez vérifier si le fichier n'est pas déjà ouvert dans une application.");
+		
 		}
 	}
     
