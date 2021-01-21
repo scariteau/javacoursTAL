@@ -1,0 +1,42 @@
+Exercice 1:
+Ecrire un programme java qui demande à l'utilisateur de saisir son nom et de lui afficher son nom avec le message de bienvenue
+
+Excercice 2:
+Ecrire un programme java qui demande à l’utilisateur de saisir un nombre et de lui afficher son double
+
+Exercice 3:
+
+
+Ecrire un programme java qui demande à l’utilisateur de saisir successivement deux nombres réels et  de lui afficher le maximum des deux
+
+Exercice 4:
+
+Ecrire un programme java qui demande à l’utilisateur de saisir un nombre entier et de lui afficher que le nombre est pair ou impair selon la valeur tapée
+
+
+Exercice 5:
+
+Ecrire un programme java qui permet d'échanger les valeurs de deux nombres saisies par l'utilisateur.
+
+Exercice 6:
+
+Ecrire un programme Java qui calcul la somme des 100 premiers entiers
+
+Exercice 7:
+Ecrire un programme Java qui demande à l'utilisateur de saisir un nombre entier n et lui affiche  la somme des n premiers nombres entiers
+
+Exercice 8:
+
+Ecrire un programme Java qui demande à l'utilisateur de saisir son âge et de lui afficher qu'il est mineur si son âge est inférieur à 18 ans et qu'il est majeur dans le cas contraire ?
+
+Exercice 9:
+Ecrire un programme Java calcul factorielle d'un entier  n  saisi par l’utilisateur
+
+Exercice 10:
+Ecrire un programme Java qui demande à l’utilisateur de saisir un nombre entier n et de lui afficher successivement tous les nombres pairs qui sont inférieur ou égale n
+
+Exercice 11:
+Ecrire un programme Java qui demande à l’utilisateur de saisir 3 nombres réels  x, y  et z et de lui afficher le maximum de ces trois nombres
+
+ 
+
