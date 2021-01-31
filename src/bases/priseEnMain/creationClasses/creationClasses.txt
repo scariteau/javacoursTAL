@@ -1,0 +1,35 @@
+Exercice 1:
+
+1 – Créer une classe Java nommée Compte   qui représente un compte bancaire de visibilité public, ayant pour attributs : public  Double solde
+2 - Créer un constructeur ayant comme  paramètre solde.
+3 - Créer une méthode deposer() du type void qui gère les versements
+4 - Créer une méthode retirer() du type void qui gère les retraits.
+5 - Créer une méthode afficher()  du type void permettant d'afficher le solde
+6 - Donner le code complet de la classe Compte
+7 - Créer une classe  TestCompte permettant de tester le compte en effectuant un versement et puis un retrait
+
+Exercice 2:
+
+1 - Créer une classe  Voiture  Java de visibilité public, ayant pour attributs : String marque
+,  Double prix,  de visibilité public.
+2 - Créer un constructeur sans paramètres ( par défaut )
+3 - Créer les getters et setters
+4 - Créer une méthode void afficher( ) permettant d'afficher les résultats
+5 - Donner le code final de la classe.
+6 - Créer une classe Exécution de visibilité public permettant d'exécuter les résultats.
+
+Exercice 3:
+1 - Créer une classe Java nommée Rectangle ayant pour attributs  : Longueur et Largeur tous deux du type Double, ajouter ensuite un constructeur avec paramètres.
+2 - Définir une méthode  surface() du type Double permettant de calculer la surface du rectangle et une méthode périmètre() du type Double permettant de calculer le périmètre du rectangle.
+3 - Créer une méthode  afficher() du type void pour afficher les résultats. Donner ensuite le code complet de la classe.
+4 - Créer une classe TestRectangle pour afficher les résultats surface et périmètre.
+
+Exercice 4:
+
+1 – Créer une classe Java nommée Point ayant pour attribut Double Abscisse et double ordonnee
+2 – Créer une classe Cercle doté d'un attribut centre du type Point. Et des méthodes suivantes :
+- périmètre() du type Double permettant de calculer le périmètre du cercle.
+- surface() du type Double permettant de calculer la surface du cercle.
+- testAppartenance() du type void permettant de tester si un point appartient au cercle ou non
+- afficher() du type void permettant d'afficher les résultats
+3 – Créer une classe TestCercle contenant une méthode static void main()  permettant de tester les résultats
