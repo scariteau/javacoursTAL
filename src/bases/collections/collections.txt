@@ -1,0 +1,46 @@
+Exercice 1:
+Ecrire un programme java qui qui crée un Array Liste, y ajoute des couleurs et affiche ces couleurs
+
+Exercice 2:
+Ecrire un programme java qui permet d'iterer sur tous les éléments d'une array liste
+
+Exercice 3:
+Ecrire un programme java permettant de retrouver un élément à un indice donné d'un array liste.
+
+Exercice 4:
+Ecrire un programme qui permet de vider une array liste.
+
+Exercice 5:
+Ecrire un programme java qui permet d'ajouter un élément à la fin de la linked liste.
+
+Exercice 6:
+Ecrire un programme java qui permet d'iterer sur tous les éléments d'une linked liste.
+
+Exercice 7:
+Ecrire un programme java permettant d'inserer un élément à un indice donné d'une linked liste
+
+
+Exercice 8:
+Ecrire un programme java permettant d'ajouter un élément à la fin d'un hash set
+
+Exercice 9:
+Ecrire un programme permettant de convertir un hash est en array liste
+
+Exercice 10:
+Ecrire un programme java permettant d'enlever tous les éléments d'un hash set
+
+
+Exercice 11:
+Ecrire un programme java permettant d'associer une valeur à une clé dans une hashmap.
+
+
+Exercice 12:
+Ecrire un programme java permettant de savoir si une map contient une clef spécifique.
+
+Exercice 13:
+Ecrire un programme java permettant de connaitre toutes les valeurs contenues dans une map.
+
+
+
+
+
