@@ -21,20 +21,11 @@ public class Operations {
 
 		System.out.println("Permutation: a ==> b, b ==> c, c ==> a");
 
-		/*******************************************
-		 * Completez le programme a partir d'ici.
-		 *******************************************/
 
 		int swap = a;
-		// int swap2 = b;
 		a = c;
 		c = b;
 		b = swap;
-		// c = swap2;
-
-		/*******************************************
-		 * Ne rien modifier apres cette ligne.
-		 *******************************************/
 
 		System.out.println("Les valeurs permutees sont : a = " + a + ", b = " + b + " et c = " + c);
 
@@ -48,19 +39,19 @@ public class Operations {
 		System.out.println("le Professeur Violet, le Colonel Moutarde,");
 		System.out.println("le Reverend Olive ou Mme Leblanc.\n");
 
-		System.out.print("Est-ce que votre personnage est un homme ? ");
+		System.out.print("Est-ce que votre personnage est un homme ? true ou false ");
 		boolean homme = clavier.nextBoolean();
 
 		if (homme) {
 
-			System.out.print("Votre personnage a-t-il des moustaches ? ");
+			System.out.print("Votre personnage a-t-il des moustaches ? true ou false ");
 			System.out.print("(true : oui, false : non) ");
 			boolean moustaches = clavier.nextBoolean();
 			if (moustaches) {
 				nom += "le Colonel Moutarde";
 
 			} else {
-				System.out.print("Votre personnage porte-t-il un chapeau ? ");
+				System.out.print("Votre personnage porte-t-il un chapeau ? true ou false ");
 				boolean chapeau = clavier.nextBoolean();
 				if (chapeau) {
 					nom += "le Professeur Violet";
@@ -70,7 +61,7 @@ public class Operations {
 			}
 
 		} else {
-			System.out.print("Votre personnage porte-t-il des lunettes ? ");
+			System.out.print("Votre personnage porte-t-il des lunettes ? true ou false ");
 			boolean lunettes = clavier.nextBoolean();
 
 			if (!lunettes) {

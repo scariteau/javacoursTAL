@@ -1,0 +1,5 @@
+Exercice 1 : swap de valeurs.
+Soient 3 variables a, b, et c. Ecrire un programme qui permuttent leurs valeurs.
+System.out.println("Permutation: a ==> b, b ==> c, c ==> a");
+
+Exercice 2 : Cluedo. Pensez à une personne.
