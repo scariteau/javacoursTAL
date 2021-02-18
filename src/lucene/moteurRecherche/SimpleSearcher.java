@@ -33,7 +33,7 @@ public class SimpleSearcher {
 			TopDocs results = searcher.search(query, 4096);
 			ScoreDoc[] hits = results.scoreDocs;
 
-			System.out.println("Resultat: " + hits.length + " documents contenaient " + searchQuery);
+			System.out.println("Resultat: " + hits.length + " documents contiennent " + searchQuery);
 			for (int i = 0; i < hits.length; i++) {
 				Document doc = searcher.doc(hits[i].doc);
 				String contenu = doc.get(SimpleIndexer.CONTENU);

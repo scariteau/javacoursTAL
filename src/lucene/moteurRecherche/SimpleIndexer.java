@@ -1,6 +1,9 @@
 package lucene.moteurRecherche;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -38,14 +41,21 @@ public class SimpleIndexer {
 
 	public int createIndex() throws IOException {
 
-		String doc1_contenu = "Lavez les tomates cerises et coupez-les en deux. Lavez et essorez les pousses d’épinards. Égouttez et coupez les mini-maïs en rondelles. Préparez une vinaigrette avec l’huile d’olive, le vinaigre balsamique, le sel et le poivre. Assaisonnez les tomates cerises, les mini-maïs et les pousses d’épinards";
-		String doc2_contenu = "Répartissez les pousses d’épinards, les tomates cerises et les rondelles de maïs dans un plat. Ajoutez les pommes de terre rôties par-dessus et servez immédiatement";
-		String doc3_contenu = "Répartissez les pousses d’épinards, les tomates cerises et les rondelles de maïs dans un plat. Ajoutez les pommes de terre rôties par-dessus et servez immédiatement. Arrosez les pommes de terre d’un généreux filet d’huile d’olive, salez et poivrez. Enfournez et faites-les cuire pendant 40 min en les mélangeant régulièrement.";
-		String doc4_contenu = "Répartissez les pousses d’épinards.";
-		String doc5_contenu = "Répartissez les pousses d’épinards, les tomates cerises et les rondelles de maïs dans un plat.avez les tomates cerises et coupez-les en deux. Lavez et essorez les pousses d’épinards.Assaisonnez les tomates cerises, les mini-maïs et les pousses d’épinards.";
-		String[] doc_contenu = { "", doc1_contenu, doc2_contenu, doc3_contenu, doc4_contenu, doc5_contenu };
-		for (int i = 0; i < doc_contenu.length; i++) {
-			indexFile(TITRE + i, doc_contenu[i]);
+		Map<String, String> recettes = new HashMap<String, String>();
+		String contenu_recette1 = "Lavez les tomates cerises et coupez-les en deux. Lavez et essorez les pousses d’épinards. Égouttez et coupez les mini-maïs en rondelles. Préparez une vinaigrette avec l’huile d’olive, le vinaigre balsamique, le sel et le poivre. Assaisonnez les tomates cerises, les mini-maïs et les pousses d’épinards";
+		String contenu_recette2 = "Répartissez les pousses d’épinards, les tomates cerises et les rondelles de maïs dans un plat. Ajoutez les pommes de terre rôties par-dessus et servez immédiatement";
+		String contenu_recette3 = "Répartissez les pousses d’épinards, les tomates cerises et les rondelles de maïs dans un plat. Ajoutez les pommes de terre rôties par-dessus et servez immédiatement. Arrosez les pommes de terre d’un généreux filet d’huile d’olive, salez et poivrez. Enfournez et faites-les cuire pendant 40 min en les mélangeant régulièrement.";
+		String contenu_recette4 = "Répartissez les pousses d’épinards.";
+		String contenu_recette5 = "Répartissez les pousses d’épinards, les tomates cerises et les rondelles de maïs dans un plat.avez les tomates cerises et coupez-les en deux. Lavez et essorez les pousses d’épinards.Assaisonnez les tomates cerises, les mini-maïs et les pousses d’épinards.";
+
+		recettes.put("tomates cerises", contenu_recette1);
+		recettes.put("pousses d’épinards", contenu_recette2);
+		recettes.put("pommes de terre", contenu_recette3);
+		recettes.put("huile d’olive", contenu_recette4);
+		recettes.put("rondelles de maïs", contenu_recette5);
+		
+		for (Entry<String, String> recette : recettes.entrySet()) {
+			indexFile(recette.getKey(), recette.getValue());
 		}
 
 		int nbFichiersIndexees = indexer.getNbFichiersIndexes();
