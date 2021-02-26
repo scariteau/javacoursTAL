@@ -15,7 +15,7 @@ public class RecettesSearcher {
 		if (args.length > 1) {
 			MoteurLucene moteurLucene = new MoteurLucene(args[0], args[1]);
 			try {
-				moteurLucene.createIndex();
+				moteurLucene.createIndex(true);
 				if (args.length == 3)
 					moteurLucene.search(args[2]);
 

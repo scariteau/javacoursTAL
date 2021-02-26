@@ -26,7 +26,7 @@ public class Indexer {
 	}
 
 	public int createIndex(Document document) throws IOException {
-		System.out.println("Indexing " + document);
+		//System.out.println("Indexing " + document);
 		writer.addDocument(document);
 		return writer.numRamDocs();
 	}

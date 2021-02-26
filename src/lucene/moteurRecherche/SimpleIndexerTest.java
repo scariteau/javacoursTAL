@@ -1,7 +1,5 @@
 package lucene.moteurRecherche;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -36,11 +34,42 @@ class SimpleIndexerTest {
 
 		String path = new File("src/lucene/moteurRecherche/ressources").getAbsolutePath();
 		String indexDir = path.concat("/indexsimple");
-		
 		SimpleSearcher simpleSearcher=new SimpleSearcher();
 		simpleSearcher.search("huile d’olive", indexDir);
-		//simpleSearcher.search("recette:rondelles AND de AND maïs", indexDir);
-		//simpleSearcher.search("nomRecette:huile*", indexDir);
+		
+	}
+	
+	
+	@Test
+	void testSearchSimpleIndexWithAND() throws IOException, ParseException {
+
+		String path = new File("src/lucene/moteurRecherche/ressources").getAbsolutePath();
+		String indexDir = path.concat("/indexsimple");
+		
+		SimpleSearcher simpleSearcher=new SimpleSearcher();
+		simpleSearcher.search("recette:rondelles AND de AND maïs", indexDir);
+		
+	}
+	
+	@Test
+	void testSearchSimpleIndexWithOR() throws IOException, ParseException {
+
+		String path = new File("src/lucene/moteurRecherche/ressources").getAbsolutePath();
+		String indexDir = path.concat("/indexsimple");
+		
+		SimpleSearcher simpleSearcher=new SimpleSearcher();
+		simpleSearcher.search("recette:rondelles OR de OR maïs", indexDir);
+		
+	}
+	
+	@Test
+	void testSearchSimpleIndexInKey() throws IOException, ParseException {
+
+		String path = new File("src/lucene/moteurRecherche/ressources").getAbsolutePath();
+		String indexDir = path.concat("/indexsimple");
+		
+		SimpleSearcher simpleSearcher=new SimpleSearcher();
+		simpleSearcher.search("nomRecette:huile*", indexDir);
 		
 	}
 

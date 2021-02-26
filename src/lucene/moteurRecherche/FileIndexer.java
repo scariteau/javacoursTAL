@@ -11,7 +11,10 @@ import org.apache.lucene.document.TextField;
 public class FileIndexer {
 	private Indexer indexer;
 
-	public FileIndexer(String indexDir) {
+	private boolean storeContents;
+
+	public FileIndexer(String indexDir, boolean storeContents) {
+		this.storeContents = storeContents;
 		try {
 			this.indexer = new Indexer(indexDir);
 		} catch (IOException e) {
@@ -22,6 +25,9 @@ public class FileIndexer {
 	private Document getDocument(File file) throws IOException {
 		Document document = new Document();
 		TextField contentField = new TextField(LuceneConstants.CONTENTS, new String(Files.readAllBytes(file.toPath())),
+				TextField.Store.NO);
+		if(storeContents)
+		 contentField = new TextField(LuceneConstants.CONTENTS, new String(Files.readAllBytes(file.toPath())),
 				TextField.Store.YES);
 		TextField fileNameField = new TextField(LuceneConstants.FILE_NAME, file.getName(), TextField.Store.YES);
 		TextField filePathField = new TextField(LuceneConstants.FILE_PATH, file.getCanonicalPath(),
@@ -32,7 +38,7 @@ public class FileIndexer {
 		return document;
 	}
 
-	private int indexFile(File file) throws IOException {
+	private int indexFile(File file ) throws IOException {
 		System.out.println("Indexing " + file.getCanonicalPath());
 		Document document = getDocument(file);
 		return indexer.createIndex(document);

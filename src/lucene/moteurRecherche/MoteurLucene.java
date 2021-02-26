@@ -20,8 +20,8 @@ public class MoteurLucene {
 
 	}
 
-	public void createIndex() throws IOException {
-		indexer = new FileIndexer(indexDir);
+	public void createIndex(boolean storeContents) throws IOException {
+		indexer = new FileIndexer(indexDir,storeContents);
 		int numIndexed;
 		long startTime = System.currentTimeMillis();
 		numIndexed = indexer.createIndex(dataDir, new TextFileFilter());
