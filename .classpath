@@ -18,5 +18,7 @@
 			<attribute name="javadoc_location" value="file:/C:/Users/33616/Documents/Boulot/javacours/projets/lucene/lucene-8.7.0/lucene-8.7.0/docs/queryparser/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/33616/Documents/Boulot/javacours/NPL/stanford-corenlp-4.2.0-models-french.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/CoreNLP"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
